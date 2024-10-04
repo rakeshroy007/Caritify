@@ -1,0 +1,64 @@
+<%- include('./partials/header') %>
+
+<% if(error.length>0){ %>
+    <div class="absolute top-8 left-1/2 -translate-x-1/2 -translate-y-1/2 p-3 rounded-full bg-red-500">
+        <span class="inline-block mt-1 mb-1 text-white">
+            <%= error %>
+        </span>
+    </div>
+<% } %>
+
+<!-- Background Color -->
+<div class="w-full h-screen flex  px-20 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 justify-around gap-20 relative">
+    <!-- Icon Button to /owners -->
+    <div class="flex flex-col items-end gap-4 absolute top-5 right-5">
+        <div class="flex space-x-4"> <!-- Flex container for horizontal alignment -->
+            <a href="/owners" class="p-3 rounded-full bg-sky-300 shadow-lg hover:bg-sky-200 transition">
+                <span>Create Admin</span>
+            </a>
+            <a href="/owners/admin" class="p-3 rounded-full bg-yellow-300 shadow-lg hover:bg-yellow-200 transition">
+                <span>Create Products</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Create Account Section -->
+    <div class="w-1/2 flex items-center justify-center h-screen">
+        <div class="w-full px-32 py-10 bg-white shadow-lg rounded-lg">
+            <h3 class="text-4xl font-semibold text-gray-800 mb-2">Welcome to <span class="text-blue-500">Cartify</span></h3>
+            <h4 class="text-2xl mb-5 text-gray-600">Create your account</h4>
+            <form autocomplete="off" action="/users/register" method="post">
+                <input
+                    class="bg-gray-100 block w-full px-3 py-2 border-[1px] rounded-md mb-3 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    type="text" placeholder="Full Name" name="fullname">
+                <input
+                    class="bg-gray-100 block w-full px-3 py-2 border-[1px] rounded-md mb-3 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    type="email" placeholder="Email" name="email">
+                <input
+                    class="bg-gray-100 block w-full px-3 py-2 border-[1px] rounded-md mb-3 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    type="password" placeholder="Password" name="password">
+                <input class="px-5 rounded-full py-3 mt-2 bg-blue-500 text-white cursor-pointer hover:bg-blue-600 transition"
+                    type="submit" value="Create My Account">
+            </form>
+        </div>
+    </div>
+
+    <!-- Login Section -->
+    <div class="w-2/5 flex items-center justify-center h-screen">
+        <div class="w-full px-32 py-10 bg-white shadow-lg rounded-lg">
+            <h4 class="text-2xl capitalize mb-5 text-gray-600">Login to your account</h4>
+            <form autocomplete="off" action="/users/login" method="post">
+                <input
+                    class="bg-gray-100 block w-full px-3 py-2 border-[1px] rounded-md mb-3 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    type="email" placeholder="Email" name="email">
+                <input
+                    class="bg-gray-100 block w-full px-3 py-2 border-[1px] rounded-md mb-3 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    type="password" placeholder="Password" name="password">
+                <input class="px-5 block rounded-full py-3 mt-2 bg-blue-500 cursor-pointer text-white hover:bg-blue-600 transition"
+                    type="submit" value="Login">
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include('./partials/footer') %>
