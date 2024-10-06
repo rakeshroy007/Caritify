@@ -29,7 +29,7 @@ Caritify is a web-based application that handles user authentication, sessions, 
 1. Clone the repository:
 
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/rakeshroy007/Caritify
    cd cartify
 
 2. ### Install the dependencies:
