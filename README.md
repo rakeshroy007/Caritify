@@ -51,7 +51,7 @@ Caritify is a web-based application that handles user authentication, sessions, 
 ## Usage
 To start the application, run the following command:
         
-        npm start
+        node .\app.js
 
 
 Navigate to `http://localhost:3000` in your web browser to access the application.
